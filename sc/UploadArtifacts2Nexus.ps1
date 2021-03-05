@@ -26,24 +26,26 @@ function Import-ArtifactGAV()
 	}
 	PROCESS
 	{
-		$repoContent = CreateStringContent "r" $Repository
-		$groupContent = CreateStringContent "g" $Group
-		$artifactContent = CreateStringContent "a" $Artifact
-		$versionContent = CreateStringContent "v" $Version
-		$packagingContent = CreateStringContent "p" $Packaging
-		$streamContent = CreateStreamContent $PackagePath
+		$params - @{
+		Uri = "http://$EndpointUrl/service/rest/v1/components?repository=$Repository"
+		Method = "POST"
+		Headers =@{
+			ContentType = "application/$Packaging"
+		}
+			
+		}
+		
+		$form = @{
+		"maven2.generate-pom" ='true'
+		"maven2.groupId" = $Group
+		"maven2.artifactId" = $Packaging
+		"version" = $version
+		"maven2.asset1" = Get-Item -Path $PackagePath
+		"maven.asset1.extention" = $Packaging
+		}
+		Invoke-WebRequest @param -Form $form -Credential $Credential -Authentication Basic
 
-		$content = New-Object -TypeName System.Net.Http.MultipartFormDataContent
-		$content.Add($repoContent)
-		$content.Add($groupContent)
-		$content.Add($artifactContent)
-		$content.Add($versionContent)
-		$content.Add($packagingContent)
-		$content.Add($streamContent)
-
-		$httpClientHandler = GetHttpClientHandler $Credential
-
-		return PostArtifact $EndpointUrl $httpClientHandler $content
+		
 	}
 	END { }
 }
