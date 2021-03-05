@@ -26,7 +26,7 @@ function Import-ArtifactGAV()
 	}
 	PROCESS
 	{
-		$params - @{
+		$params = @{
 		Uri = "http://$EndpointUrl/service/rest/v1/components?repository=$Repository"
 		Method = "POST"
 		Headers =@{
