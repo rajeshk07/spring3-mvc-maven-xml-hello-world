@@ -41,7 +41,7 @@ function Import-ArtifactGAV()
 		"maven2.artifactId" = $Packaging
 		"version" = $version
 		"maven2.asset1" = Get-Item -Path $PackagePath
-		"maven2.asset1.Extension" = $Packaging
+		"maven2.asset1.extension" = $Packaging
 		}
 		Invoke-WebRequest @params -Form $form -Credential $Credential -Authentication Basic -AllowUnencryptedAuthentication
 
