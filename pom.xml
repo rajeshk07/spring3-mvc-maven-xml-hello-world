@@ -4,7 +4,7 @@
 	<groupId>com.mkyong</groupId>
 	<artifactId>spring3-mvc-maven-xml-hello-world</artifactId>
 	<packaging>jar</packaging>
-	<version>1-SNAPSHOT</version>
+	<version>2-SNAPSHOT</version>
 	<name>spring3 mvc maven</name>
 
 	<properties>
