@@ -13,18 +13,7 @@
 		<jstl.version>1.2</jstl.version>
 	</properties>
 	
-	<repositories>
-	<!--<repository>
-  <id>rtest</id>
-  <url>https://pkgs.dev.azure.com/td-symplr-test/f565089d-47c7-4c2f-a69b-e192e05be5c9/_packaging/rtest/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
---></repositories>
+	
 <distributionManagement><repository>
   <id>rtest</id>
   <url>https://pkgs.dev.azure.com/td-symplr-test/f565089d-47c7-4c2f-a69b-e192e05be5c9/_packaging/rtest/maven/v1</url>
