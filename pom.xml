@@ -4,7 +4,7 @@
 	<groupId>com.mkyong</groupId>
 	<artifactId>spring3-mvc-maven-xml-hello-world</artifactId>
 	<packaging>jar</packaging>
-	<version>3-SNAPSHOT</version>
+	<version>4-SNAPSHOT</version>
 	<name>spring3 mvc maven</name>
 
 	<properties>
@@ -14,7 +14,7 @@
 	</properties>
 	
 	<repositories>
-	<repository>
+	<!--<repository>
   <id>rtest</id>
   <url>https://pkgs.dev.azure.com/td-symplr-test/f565089d-47c7-4c2f-a69b-e192e05be5c9/_packaging/rtest/maven/v1</url>
   <releases>
@@ -23,7 +23,8 @@
   <snapshots>
     <enabled>true</enabled>
   </snapshots>
-</repository></repositories>
+</repository>
+--></repositories>
 <distributionManagement><repository>
   <id>rtest</id>
   <url>https://pkgs.dev.azure.com/td-symplr-test/f565089d-47c7-4c2f-a69b-e192e05be5c9/_packaging/rtest/maven/v1</url>
